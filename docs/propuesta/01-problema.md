@@ -1,46 +1,70 @@
-# Propuesta: Gestor de negocios
+# Problema, usuarios y propuesta de valor
 
-*Introducción*
-La digitalización empresarial ha marginado a un sector fundamental: los profesionales de oficios que trabajan a pie de calle. Mientras el mercado desarrolla complejas herramientas de gestión administrativa para entornos de oficina, el técnico autónomo sigue dependiendo del papel, el bolígrafo y la memoria. Esta brecha tecnológica provoca fugas de capital por ventas no cerradas y una carga burocrática inasumible al final de la jornada. Nuestro proyecto nace para resolver este problema mediante el diseño de interfaces (UX): una solución puramente móvil, táctil y de fricción cero, adaptada a la realidad de quien trabaja con las manos y necesita agilidad frente al cliente.
+## Introducción
 
-## 1. Identificación de la necesidad
-*   *El problema:* Los autónomos pierden clientes por el retraso en la elaboración y envío de presupuestos. Además, la perdida constante de justificantes y tickets de compra físicos en papel genera pérdidas económicas al no poder deducir esos gastos.
-*   *A quién afecta:* Autónomos y pequeños negocios de oficios tradicionales (electricistas, fontaneros, reformas, climatización) con baja alfabetización digital y cuya jornada laboral transcurre íntegramente fuera de una oficina.
-*   *Frecuencia:* Diaria. Un técnico promedio realiza múltiples visitas a clientes y acude a almacenes de suministros varias veces en una misma jornada.
-*   *Impacto:* Pérdida directa de ingresos por ventas no cerradas en caliente, problemas contables y pérdida de tiempo personal.
-*   *Evidencias:* Foros de autónomos llenos de quejas sobre la burocracia, furgonetas comerciales acumulando facturas arrugadas en las guanteras, y valoraciones de una estrella en CRMs móviles quejándose de que "piden demasiados datos para hacer una factura rápida".
-*   
-## 2. Usuarios Objetivo y Casos de Uso
+«Presupuestando» es una propuesta de aplicación web *mobile-first* para profesionales autónomos de oficios que trabajan fuera de una oficina. El problema que se quiere validar es si crear y compartir un presupuesto desde el lugar de trabajo, y archivar el justificante de un gasto en el momento, resulta hoy innecesariamente lento o difícil para este perfil.
 
-### User Persona 1: Paco, 52 años, Electricista Autónomo
-*   *Necesidades:* Dar un precio cerrado al cliente en menos de 3 minutos, justo después de diagnosticar la avería, sin tener que teclear.
-*   *Frustraciones:* Odia llegar a casa a las 20:00 y encender el ordenador para hacer cuentas en Excel. Los teclados de móvil pequeños le desesperan cuando tiene las manos sucias. Le abruma la jerga técnica (NIF, bases imponibles, devengos).
-*   *Objetivos:* Cerrar el trato en persona, no perder ningún ticket de compra y tener las tardes libres de papeleo.
-*   *Casos de uso principales:* 
-    1. Pulsar 3 iconos visuales (ej. "Tubería" + "Mano de obra"), generar un enlace temporal y enviarlo por WhatsApp al cliente. 
-    2. Hacer una foto al ticket de la ferretería y asociarlo a un trabajo activo con un clic.
+La existencia y magnitud de ese problema aún no se han demostrado mediante entrevistas, encuestas ni datos cuantitativos del equipo. Por tanto, las afirmaciones sobre frecuencia, pérdida de ventas y dificultades con las herramientas actuales se consideran **hipótesis de investigación**, no resultados observados. El equipo no presentará las personas ficticias ni las referencias de proveedores como evidencia de usuarios.
 
-### User Persona 2: Elena, 41 años, Clienta Particular
-*   *Necesidades:* Obtener un presupuesto claro, desglosado y por escrito para aprobar una reparación en su domicilio.
-*   *Frustraciones:* Recibir presupuestos informales mediante notas de voz ("te va a salir por unos 800€") que luego cambian, o tener que abrir PDFs pesados en el correo y responder formalmente.
-*   *Objetivos:* Aprobar el gasto rápidamente desde su teléfono móvil y tener un registro de lo acordado.
-*   *Casos de uso principales:* 
-    1. Recibir un WhatsApp, abrir la URL del presupuesto, revisar el desglose y pulsar el botón "Aceptar".
+## 1. Necesidad e hipótesis
 
+- **Problema que se investigará:** los profesionales de oficios pueden posponer la preparación y el envío de presupuestos hasta volver a la oficina, y pueden perder o tardar en archivar tickets físicos.
+- **Usuarios potenciales:** autónomos y pequeños negocios de electricidad, fontanería, reformas y climatización que preparan presupuestos y registran gastos durante visitas de trabajo.
+- **Frecuencia e impacto:** pendientes de medir. No se dispone todavía de una muestra que permita afirmar cuántos presupuestos se retrasan, cuántos justificantes se pierden ni el coste económico asociado.
+- **Hipótesis de valor:** una experiencia móvil con pocos campos y controles táctiles grandes puede reducir el tiempo necesario para crear y compartir un presupuesto, y facilitar el archivo de una fotografía de un ticket.
 
-## 3. Análisis de Competencia
+### Evidencia disponible y pendiente
 
-*   *Competidor 1: Holded / Qonto*
-    *   Fortalezas: Ecosistema financiero robusto, control de inventario, contabilidad legal y conciliación bancaria completa.
-    *   Debilidades: Curva de aprendizaje extrema. Interfaz diseñada para administrativos con ratón y teclado. La versión móvil está saturada de menús contables que paralizan al técnico que solo quiere dar un precio.
-*   *Competidor 2: FacturaDirecta / Billin*
-    *   Fortalezas: Muy eficaces para la emisión legal de facturas en Pymes.
-    *   Debilidades: Fricción de entrada inasumible en movilidad. Exigen rellenar una ficha completa de cliente (Nombre, Dirección, NIF, Código Postal) antes de permitir añadir una sola línea de "Mano de obra". Rompen la inmediatez del trabajo de campo.
-*   *Competidor 3: Libreta de papel + WhatsApp*
-    *   Fortalezas: Flexibilidad total, cero coste y cero curva de aprendizaje.
-    *   Debilidades: Descontrol absoluto. El cliente no tiene desglose profesional, los presupuestos se entierran en el historial de chat, los tickets físicos se pierden y no hay vinculación entre el ingreso acordado y el material gastado.
-*   *Oportunidades:* Ninguna app grande está atacando la "fase preventiva y operativa" con una experiencia UX puramente móvil, táctil y asíncrona mediante enlaces web.
+La información de producto de los competidores confirma que existen herramientas de gestión con presupuestos y gastos; no demuestra que sean difíciles de usar ni que los usuarios pierdan ventas. La libreta y WhatsApp son una alternativa observada en el planteamiento del equipo, pero falta documentar entrevistas u observaciones que confirmen su uso.
 
-## 4. Propuesta de Valor Única
+**Trabajo de investigación pendiente antes de afirmar que el problema está validado:**
 
-Al *profesional de oficios tradicionales* le pasa que *pierde ventas por no poder entregar un presupuesto rápido in situ y pierde liquidez al extraviar justificantes físicos de compra. Hoy usa **el clásico bloc de notas o herramientas contables complejas (como Holded o FacturaDirecta), que fallan por **exigir la introducción manual de demasiados datos fiscales, estar diseñadas para ordenador y romper la inmediatez del trabajo de campo. Nosotros le damos **una aplicación web de bolsillo que permite generar presupuestos visuales en tres clics para su aceptación directa vía WhatsApp, y que archiva los gastos al instante utilizando únicamente la cámara del móvil*.
+1. Entrevistar al menos a cinco autónomos de oficios distintos que hayan preparado presupuestos en el último mes.
+2. Preguntar por el proceso más reciente, los pasos y herramientas utilizadas, el tiempo aproximado, los retrasos, los tickets perdidos y las consecuencias; evitar sugerir la respuesta o presentar la aplicación antes de conocer su proceso.
+3. Registrar fecha, perfil no identificable, preguntas, respuestas anonimizadas y método de síntesis en el repositorio. No recopilar nombres de clientes, datos fiscales ni documentos financieros.
+4. Distinguir citas textuales anonimizadas de interpretaciones del equipo y buscar también casos que contradigan la hipótesis.
+5. Resumir el número de participantes y patrones observados, sin generalizar la muestra a todos los autónomos. Si se recogen datos, añadirlos a esta sección antes de la entrega final.
+
+## 2. Usuarios objetivo y casos de uso
+
+Las siguientes personas son **arquetipos hipotéticos**, elaborados para orientar el diseño y pendientes de validación con usuarios reales.
+
+### Persona 1: Paco, 52 años, electricista autónomo (hipótesis)
+
+- **Necesidades:** preparar un presupuesto claro durante o inmediatamente después de una visita; guardar el justificante de un gasto asociado al trabajo.
+- **Frustraciones por validar:** volver a introducir datos al final de la jornada, teclear con el móvil y tener que recordar dónde guardó un ticket.
+- **Objetivos:** compartir una propuesta comprensible desde el lugar de trabajo y encontrar después el gasto asociado.
+- **Casos de uso:** acceder a su cuenta, crear un presupuesto con conceptos e importes, generar un enlace temporal para consultarlo y compartirlo por WhatsApp; fotografiar un ticket y asociarlo al presupuesto.
+
+### Persona 2: Elena, 41 años, clienta particular (hipótesis)
+
+- **Necesidades:** consultar desde el móvil el desglose y el importe de un presupuesto recibido.
+- **Frustraciones por validar:** tener que instalar una aplicación o crear una cuenta para consultar una propuesta.
+- **Objetivos:** acceder a la información acordada mediante un enlace y poder conservarla.
+- **Caso de uso incluido en el MVP:** abrir el enlace temporal y consultar el presupuesto sin registrarse. Aceptar o rechazar queda fuera del MVP y se considera una ampliación.
+
+## 3. Competencia y alternativas
+
+La comparación separa características que los proveedores anuncian de observaciones de reseñas. Las páginas comerciales describen sus propios productos; no demuestran demanda ni facilidad de uso. Las reseñas son experiencias individuales, no una muestra representativa.
+
+| Alternativa | Características documentadas | Oportunidad que se investigará |
+|---|---|---|
+| **Holded** | Su página de precios presenta una suite de gestión para pequeñas empresas y enumera, entre otras funciones, presupuestos, facturas, contactos y herramientas financieras. La oferta depende del plan. | Comprobar con autónomos si necesitan una herramienta más acotada para generar y compartir un presupuesto desde el móvil, o si la solución actual ya les resulta suficiente. |
+| **FacturaDirecta** | La página oficial presenta facturación, presupuestos y gastos; el plan gratuito publicado incluye límites de facturas, clientes y productos. Los límites y precios pueden cambiar. | Comparar el número de pasos necesarios para crear y compartir un presupuesto en un teléfono, sin asumir que la aplicación actual sea inadecuada. |
+| **FactuPro** | En su propia guía comercial anuncia un servicio de facturación por WhatsApp que también registra gastos a partir de fotos de tickets. Es una señal de que la combinación WhatsApp + gastos ya tiene oferta comercial, no una prueba independiente de su adopción o eficacia. | Comparar alcance y recorrido: FactuPro anuncia generación de facturas y automatización; el MVP de Presupuestando se limita a presupuestos de solo lectura y asociación de fotos, sin facturación fiscal ni OCR. Verificar en una prueba de producto antes de atribuir ventajas. |
+| **SinTrámite** | Su guía comercial describe captura y organización móvil de facturas/tickets y presenta estimaciones sobre el impacto de extraviarlos. No publica allí una metodología independiente que permita tratar esas cifras como medición representativa. | Comparar si un archivo vinculado a un presupuesto resuelve una necesidad distinta de guardar el gasto en el propio teléfono; validar con usuarios. |
+| **Libreta y WhatsApp** | Alternativa manual: notas en papel y comunicación directa por mensajería. El equipo aún debe verificar su uso, ventajas e inconvenientes mediante entrevistas. | Evaluar si un enlace consultable y un archivo de tickets asociado a cada trabajo aportan suficiente valor frente a una alternativa flexible y familiar. |
+
+Como evidencia cualitativa exploratoria, la ficha de Holded en la App Store mostraba, al consultarla el 25 de octubre de 2026, una valoración global de 4,5/5 sobre 551 valoraciones y algunas reseñas individuales que mencionan problemas de visualización de documentos o de acceso a la cámara. Son comentarios autoseleccionados sobre incidencias concretas; no demuestran que la aplicación sea generalmente difícil ni que los usuarios objetivo compartan esa experiencia. La página de FactuPro sirve como evidencia de oferta comercial existente en este ámbito, no como investigación de usuarios.
+
+**Propuesta de valor, pendiente de validación:** «Para profesionales de oficios que preparan presupuestos y guardan gastos durante su jornada, Presupuestando ofrece un recorrido web móvil para consultar un presupuesto mediante un enlace temporal de solo lectura y asociar la fotografía de un ticket al trabajo, sin que el cliente necesite una cuenta». No se afirma que sea la única solución que usa WhatsApp o captura tickets; su diferenciación propuesta es el alcance acotado a presupuestos y la asociación del gasto al trabajo, aspectos que deben compararse y validarse.
+
+### Fuentes consultadas
+
+- Holded, [planes y características](https://www.holded.com/es/precios), consultado el 25 de octubre de 2026.
+- Holded, [ficha y reseñas de la aplicación en App Store](https://apps.apple.com/es/app/holded-facturaci%C3%B3n-y-mucho-m%C3%A1s/id1369704574?see-all=reviews), consultada el 25 de octubre de 2026.
+- FacturaDirecta, [planes y características](https://www.facturadirecta.com/pequenos-negocios/precios/), consultado el 25 de octubre de 2026.
+- FactuPro, [guía comercial sobre facturación por WhatsApp](https://factupro.es/blog/facturar-por-whatsapp), consultada el 25 de octubre de 2026.
+- SinTrámite, [guía comercial para organizar tickets](https://sintramite.es/organizar-tickets-autonomos), consultada el 25 de octubre de 2026.
+
+Las páginas de producto respaldan únicamente las características y condiciones que publican; no se usan como evidencia de satisfacción, facilidad de uso o demanda. No se adopta la estimación monetaria publicada por SinTrámite como un dato validado, porque la fuente consultada no aporta una metodología independiente ni una muestra. La valoración de App Store y las reseñas pueden cambiar con el tiempo.
