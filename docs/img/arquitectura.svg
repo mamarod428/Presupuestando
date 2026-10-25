@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura propuesta de Presupuestando</title>
+  <desc id="desc">El técnico y el cliente usan una SPA React alojada en Vercel. El navegador llama a la API Express bajo el mismo origen por la ruta API. La sesión del técnico usa una cookie segura HttpOnly; el cliente consulta con un token temporal. Express valida la sesión y la propiedad, guarda datos en MongoDB Atlas y sube fotografías a Cloudinary. El técnico confirma el envío del enlace desde WhatsApp.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #0f172a; }
+      .title { font-size: 25px; font-weight: 700; }
+      .head { font-size: 19px; font-weight: 700; }
+      .body { font-size: 15px; }
+      .small { font-size: 13px; fill: #334155; }
+      .box { fill: #f8fafc; stroke: #475569; stroke-width: 2; rx: 12; }
+      .cloud { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; rx: 16; }
+      .service { fill: #fff; stroke: #64748b; stroke-width: 1.5; rx: 9; }
+      .flow { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .dash { stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+  <rect width="1200" height="700" fill="#fff"/>
+  <text x="600" y="42" text-anchor="middle" class="title">Arquitectura propuesta · Presupuestando</text>
+
+  <rect x="40" y="100" width="245" height="180" class="box"/>
+  <text x="162" y="132" text-anchor="middle" class="head">Navegador móvil</text>
+  <rect x="62" y="151" width="200" height="66" class="service"/>
+  <text x="162" y="179" text-anchor="middle" class="body">SPA React + Vite</text>
+  <text x="162" y="201" text-anchor="middle" class="small">React Router · Zustand · Axios</text>
+  <text x="162" y="250" text-anchor="middle" class="small">Técnico autenticado / cliente</text>
+
+  <rect x="345" y="88" width="285" height="210" class="cloud"/>
+  <text x="487" y="121" text-anchor="middle" class="head">Vercel · frontend</text>
+  <rect x="370" y="145" width="235" height="82" class="service"/>
+  <text x="487" y="174" text-anchor="middle" class="body">Aplicación web</text>
+  <text x="487" y="197" text-anchor="middle" class="small">HTTPS · cabeceras seguras</text>
+  <text x="487" y="257" text-anchor="middle" class="small">Proxy del mismo origen: /api → API</text>
+
+  <rect x="710" y="88" width="300" height="390" class="cloud"/>
+  <text x="860" y="121" text-anchor="middle" class="head">Render · API backend</text>
+  <rect x="740" y="148" width="240" height="82" class="service"/>
+  <text x="860" y="178" text-anchor="middle" class="body">API REST · Express</text>
+  <text x="860" y="202" text-anchor="middle" class="small">Validación · errores explícitos</text>
+  <rect x="740" y="258" width="240" height="82" class="service"/>
+  <text x="860" y="288" text-anchor="middle" class="body">Autorización y propiedad</text>
+  <text x="860" y="312" text-anchor="middle" class="small">JWT corto en cookie HttpOnly</text>
+  <rect x="740" y="368" width="240" height="82" class="service"/>
+  <text x="860" y="398" text-anchor="middle" class="body">Subida de imagen</text>
+  <text x="860" y="422" text-anchor="middle" class="small">Multer · límites · validar contenido</text>
+
+  <rect x="1045" y="115" width="135" height="135" class="box"/>
+  <text x="1112" y="149" text-anchor="middle" class="head">Atlas</text>
+  <text x="1112" y="180" text-anchor="middle" class="small">usuarios</text>
+  <text x="1112" y="202" text-anchor="middle" class="small">presupuestos</text>
+  <text x="1112" y="224" text-anchor="middle" class="small">tickets</text>
+
+  <rect x="1045" y="320" width="135" height="115" class="box"/>
+  <text x="1112" y="356" text-anchor="middle" class="head">Cloudinary</text>
+  <text x="1112" y="385" text-anchor="middle" class="small">Fotos de tickets</text>
+  <text x="1112" y="408" text-anchor="middle" class="small">URL persistente</text>
+
+  <rect x="40" y="355" width="245" height="92" class="box"/>
+  <text x="162" y="390" text-anchor="middle" class="head">WhatsApp · app externa</text>
+  <text x="162" y="418" text-anchor="middle" class="small">Técnico revisa y confirma envío</text>
+
+  <path d="M285 188H345" class="flow"/>
+  <path d="M630 188H710" class="flow"/>
+  <text x="670" y="163" text-anchor="middle" class="small">/api same-origin</text>
+  <text x="670" y="183" text-anchor="middle" class="small">cookie / token enlace</text>
+  <path d="M980 188H1045" class="flow"/>
+  <text x="1012" y="174" text-anchor="middle" class="small">CRUD</text>
+  <path d="M980 408H1045" class="flow"/>
+  <text x="1012" y="394" text-anchor="middle" class="small">subida</text>
+  <path d="M860 230V258" class="flow"/>
+  <path d="M162 280V355" class="flow dash"/>
+  <text x="196" y="326" class="small">wa.me</text>
+
+  <rect x="40" y="535" width="1120" height="112" class="box"/>
+  <text x="66" y="571" class="head">Acceso al enlace público</text>
+  <text x="66" y="601" class="body">El cliente abre una ruta de solo lectura con token aleatorio temporal. El servidor busca su hash, comprueba caducidad</text>
+  <text x="66" y="626" class="body">y devuelve únicamente el presupuesto; el token no se guarda en claro ni se comparte con recursos de terceros.</text>
+</svg>

@@ -1,75 +1,73 @@
 # Objetivos y alcance
 
-**Equipo:** <Equipo 1>
+**Equipo:** Equipo 1
+
+**Proyecto:** Presupuestando
 
 ## Introducción
 
-En la Fase 3 se definen los límites y las metas medibles del proyecto **“Gestor de Negocios”**.
-
-Una vez validada la viabilidad técnica en las fases anteriores, este documento:
-
-- Fija los objetivos SMART que servirán para la evaluación final.
-- Acota el alcance del Producto Mínimo Viable (MVP).
-- Deja constancia de las líneas de desarrollo que quedan fuera de esta iteración.
+Esta fase fija los resultados medibles y límites del proyecto. El alcance funcional se deriva de los siete requisitos Must del [MVP en la viabilidad técnica](02-viabilidad-tecnica.md); mantener ambos documentos sincronizados es una condición de entrega.
 
 ## 1. Objetivos
 
 ### Objetivo general
 
-Facilitar que los profesionales de oficios tradicionales puedan emitir presupuestos y guardar sus tickets de gasto en el momento, desde el móvil y directamente en el lugar de trabajo, eliminando la carga administrativa al acabar la jornada.
+Facilitar a profesionales autónomos de oficios la creación y consulta de presupuestos y el archivo de tickets de gasto desde el móvil durante su jornada.
 
-### Objetivos específicos
+### Objetivos SMART
 
-| ID         | Objetivo SMART                                                             | Qué se mide                                                                                                         | Valor de éxito                    | Cómo se comprueba                                                                       |
-|------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------------------------------------------------------------------------------|
-| **OBJ-01** | Emisión rápida de presupuestos *in situ* tras diagnosticar una avería.     | Tiempo transcurrido desde que se inicia la creación del presupuesto hasta que se genera el enlace de WhatsApp.      | Menos de 3 minutos.               | Prueba cronometrada con 3 autónomos en sus móviles antes de la defensa final.           |
-| **OBJ-02** | Captura y archivo inmediato de justificantes de compra desde la web móvil. | Tiempo total desde que se abre la cámara hasta que la foto del ticket se guarda en la nube y se vincula en la BBDD. | Menos de 30 segundos.             | Registro de tiempos en cliente/servidor mediante pruebas de rendimiento en red 4G real. |
-| **OBJ-03** | Consulta y aprobación de presupuestos por el cliente sin fricción.         | Tiempo de carga y aprobación del presupuesto a través del enlace de WhatsApp, sin necesidad de registro.            | Menos de 1 minuto.                | Pruebas de usabilidad con 3 clientes en sus propios smartphones.                        |
-| **OBJ-04** | Optimización del uso de datos móviles en la subida de fotos de tickets.    | Peso final de la imagen enviada a la API de almacenamiento.                                                         | Inferior a 500 KB por fotografía. | Comprobación directa de metadatos en el panel de Cloudinary.                            |
+| ID | Objetivo | Indicador y umbral de éxito | Método y plazo |
+|---|---|---|---|
+| **OBJ-01** | Reducir el esfuerzo de preparar y compartir un presupuesto desde el lugar de trabajo. | Al menos 4 de 5 participantes completan la tarea en menos de 3 minutos. | Cronometrar una tarea con cada uno de cinco autónomos de oficios distintos, antes de la defensa final. Anotar errores y abandonos. |
+| **OBJ-02** | Facilitar el archivo inmediato de un ticket de gasto asociado al trabajo correspondiente. | Al menos 4 de 5 participantes completan la tarea en menos de 30 segundos, con conectividad 4G o equivalente. | Cronometrar una tarea con cada uno de los mismos cinco autónomos, antes de la defensa final; separar captura, carga y asociación en el registro. |
+| **OBJ-03** | Facilitar al cliente la consulta del presupuesto recibido sin crear una cuenta. | Al menos 4 de 5 participantes abren y localizan el total y los conceptos en menos de 1 minuto. | Prueba de usabilidad con al menos cinco personas que representen a clientes, desde teléfonos propios, antes de la defensa final. No incluye aprobar o rechazar. |
+| **OBJ-04** | Reducir el tamaño de las fotografías para facilitar su envío por datos móviles sin perder legibilidad. | En al menos 9 de 10 imágenes de prueba, el archivo enviado pesa menos de 500 KB y el texto principal del ticket sigue siendo legible. | Medir el tamaño y comprobar legibilidad de diez fotos tomadas con al menos tres móviles distintos antes de la defensa final. Si no se logra el umbral, documentar la limitación y no afirmar que el objetivo se cumplió. |
+
+Los instrumentos de prueba registrarán tiempo, dispositivo/navegador, calidad de conectividad y resultado de cada tarea; no guardarán nombres ni datos personales innecesarios. Los resultados se presentarán como observaciones de una muestra pequeña, no como evidencia estadísticamente representativa.
 
 ## 2. Alcance
 
-### El MVP
+### MVP: siete requisitos Must
 
-El Producto Mínimo Viable y su flujo de trabajo están detallados en [`02-viabilidad-tecnica.md`](02-viabilidad-tecnica.md).
+El MVP coincide exactamente con RF-01 a RF-07 de [02-viabilidad-tecnica.md](02-viabilidad-tecnica.md):
 
-El alcance se limita estricta y exclusivamente a los **6 requisitos clasificados como Must have**:
-
-- Autenticación del técnico.
-- Creación rápida de presupuestos.
-- Generación de enlaces temporales.
-- Captura fotográfica de tickets.
-- Vinculación ticket-presupuesto.
+1. Registro de cuenta de técnico.
+2. Inicio de sesión del técnico.
+3. Creación y guardado de presupuesto con datos mínimos de cliente y conceptos.
+4. Enlace temporal de solo lectura para consultar el presupuesto sin cuenta.
+5. Preparación del mensaje de WhatsApp con el enlace, con confirmación de envío por el técnico.
+6. Captura o selección y subida de una fotografía de ticket.
+7. Asociación del ticket a un presupuesto propio.
 
 ### Plataforma
 
-- **Tipo:** Aplicación web con enfoque estrictamente *mobile-first*.
-- **Compatibilidad:** Optimizada para navegadores móviles Chrome y Safari en iOS y Android.
-- **Exclusiones:** No se desarrollarán aplicaciones nativas para App Store ni Google Play Store.
+- Aplicación web adaptable a móviles; no se desarrollarán aplicaciones nativas.
+- Se realizarán pruebas en navegadores móviles Chrome y Safari disponibles para el equipo; la compatibilidad no se dará por garantizada sin probar dispositivos reales.
+- Se publicará un prototipo educativo si las condiciones vigentes de los servicios elegidos lo permiten. No se presentará como sistema de producción ni como herramienta de cumplimiento fiscal.
 
 ### Usuarios y datos
 
-- **Usuarios:** 1 rol activo, correspondiente al autónomo o técnico.
-- **Clientes finales:** Acceso público mediante un token único.
-- **Entorno de datos:** Datos de prueba (*seed data*) que simulan la actividad diaria de autónomos, incluyendo:
-    - Clientes ficticios.
-    - Presupuestos de prueba.
-    - Fotografías reales de tickets comprimidas.
+- Un rol autenticado: técnico/autónomo.
+- Cliente final sin cuenta, con acceso de solo lectura mediante enlace de alta entropía y caducidad.
+- Para la demo se usarán datos de prueba. Las fotos reales de tickets solo se usarán con autorización explícita, minimizadas y con los datos fiscales o personales ocultos. No se subirán documentos de terceros ni credenciales.
+- Los datos y fotografías de prueba se eliminarán al finalizar la evaluación, conforme a un procedimiento documentado.
 
-## 3. Lo que no haremos
+## 3. Fuera del alcance de esta versión
 
-| Funcionalidad excluida                         | Motivo                                                                                                                                 |
-|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| **Conciliación bancaria y cobros *in-app***    | Añade una complejidad elevada de integración con APIs bancarias y supone un riesgo de seguridad innecesario para el tiempo del módulo. |
-| **Gestión de inventario y stock**              | Evita recargar la interfaz táctil con formularios largos, manteniendo el principio de cero fricción en movilidad.                      |
-| **Generación de facturas contables oficiales** | El proyecto se enfoca en el trabajo de campo —presupuestos y tickets—. La facturación fiscal queda pospuesta para fases futuras.       |
+| Funcionalidad | Motivo |
+|---|---|
+| Aceptar o rechazar presupuestos desde el enlace (RF-08) | Es una ampliación Should; el enlace del MVP es de solo lectura. |
+| Historial de presupuestos y listado mensual de gastos (RF-09 y RF-10) | Funciones Should posteriores al recorrido mínimo. |
+| Cálculo de beneficio y exportación PDF (RF-11 y RF-12) | Funciones Could que no son necesarias para probar la hipótesis principal. |
+| Conciliación bancaria y pagos dentro de la app (RF-13) | Requiere integraciones, permisos y medidas adicionales que no caben en el alcance educativo. |
+| Inventario y control de stock (RF-14) | No resuelve el recorrido mínimo y ampliaría la interfaz y el modelo de datos. |
+| Aplicaciones nativas, facturación fiscal oficial e integraciones de gestoría | Fuera del objetivo de prototipo y no justificadas por los Must definidos. |
 
 ## 4. Ampliaciones futuras
 
-### Generación automática de facturas en PDF
+Orden propuesto, condicionado a la validación del MVP:
 
-Conversión, con un solo clic, de presupuestos aceptados a un PDF descargable.
-
-### Exportación de gastos para gestorías
-
-Generación de un archivo comprimido (`.zip`) con todos los tickets de un periodo determinado para enviarlo al gestor.
+1. Aceptar o rechazar un presupuesto (RF-08).
+2. Consultar el historial y totales mensuales (RF-09 y RF-10).
+3. Introducir importe de tickets para calcular márgenes y generar exportaciones (RF-11 y RF-12).
+4. Evaluar integraciones fiscales solo tras validar necesidad y requisitos legales.
