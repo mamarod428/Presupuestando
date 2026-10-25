@@ -1,22 +1,22 @@
-# Propuestas de equipo · <Equipo 1>
+# Brainstorming y selección de la propuesta
 
-## Propuesta 1: Aprender y recordar técnicas de bjj
-- Qué problema resuelve: No saber técnicas de bjj para someter o para escapar de sumisiones, además de no recordarlas una vez sigues entrenando y aprendiendo nuevas tecnicas.
-- Para quién: A la gente que empieza y los que ya llevan tiempo, pero no recuerdan mucho.
-- Porque gano / no gano: Porque es algo muy concreto y sin mucho público.
+## Criterios de selección
 
-## Propuesta 2: Gestionar los plazos y requisitos de becas y ayudas
-- Qué problema resuelve: Actualmente no hay facilidades para encontrar información sobre los criterios a seguir para solicitar una beca o ayuda, y hay dificultades para recordar o investigar los tiempos para solicitarla.
-- Para quién: Personas que piden ayudas normalmente solicitadas, estudiantes que quieren solicitar beca.
-- Porque gano / no gano: cumple una necesidad muy solicitada y previene errores importantes
+El equipo comparó las propuestas según los criterios de la actividad: problema concreto, usuarios identificables, diferenciación que se pueda comprobar, alcance abordable para cuatro personas, encaje con MERN y posibilidad de terminarlo dentro del módulo. Esta comparación es una decisión cualitativa del equipo, no una investigación de mercado ni una prueba de que la necesidad esté validada.
 
-## Propuesta 3: Gestor de negocios para autónomos poco familiarizados con las tecnologías y sin tiempo para sentarse frente un ordenador
+## Ideas propuestas
 
-- Qué problema resuelve: Perder clientes por tardar días en enviar un presupuesto.
-- Para quién: Autónomos de oficios tradicionales (fontaneros, electricistas, pintores) que trabajan en la calle y no se llevan bien con la tecnología.
-- Porque gano: Porque las herramientas tradicionales están pensadas para oficina y resolvería ese problema UX.
+Las notas originales conservan las cuatro ideas, pero no registran qué integrante propuso cada una. El equipo debe completar esa atribución si dispone de los apuntes; no se asigna por inferencia.
 
-## Propuesta 4: Recordar y asegurarse de que la persona mayor se ha tomado la pastilla.
-- Qué problema resuelve: Hace que una persona mayor, que no maneja el móvil de una manera muy sencilla pueda apuntar que se ha tomado el medicamento ya que un familiar o supervisor a cargo es el que crea el recordatorio y al que le llega la notificación una vez la persona mayor confirme la toma.
-- Para quién: Personas mayores a las que se les olvida o dudan si se han tomado los medicamentos.
-- Porque gano / no gano: Porque es un problema muy común para el que hay muchas apps pero poco accesibles para un avatar de +65 años que no sepan usar el móvil.
+| Propuesta | Problema y usuarios potenciales | Valor y encaje que se consideraron | Decisión |
+|---|---|---|---|
+| Aprender y recordar técnicas de BJJ | Practicantes principiantes o con experiencia que olvidan técnicas y necesitan repasarlas. | Tema concreto y susceptible de organizarse como fichas, pero el grupo consideró que no había delimitado con suficiente precisión un caso de uso diferenciador ni el público inicial. | No seleccionada; el equipo priorizó una propuesta con un flujo de negocio que podía delimitar de forma más directa. |
+| Gestionar plazos y requisitos de becas y ayudas | Estudiantes y solicitantes que necesitan encontrar requisitos y fechas de convocatoria. | Problema reconocible y usuarios identificables, pero exige mantener información fiable y actualizada sobre convocatorias y sus fuentes; el equipo no definió un mecanismo de actualización viable para el MVP. | No seleccionada; riesgo de mantener datos vigentes y alcance de contenidos por acotar. |
+| Presupuestos y archivo de tickets para autónomos de oficios | Profesionales que trabajan en movilidad y preparan presupuestos y registran gastos durante visitas. | Flujo concreto que puede prototiparse con una aplicación web MERN; ofrece una hipótesis comprobable mediante tareas cronometradas y pruebas móviles. La diferenciación y la existencia del problema requieren validación con usuarios y comparación de productos. | Seleccionada para investigar y construir un MVP acotado. La selección no significa que el problema ya esté demostrado. |
+| Recordatorio de medicación para personas mayores | Personas mayores que pueden olvidar una toma y familiares o cuidadores que desean recibir confirmación. | Necesidad importante con dos roles claros, pero requiere diseñar para accesibilidad, notificaciones fiables y un contexto sensible de salud. El equipo consideró que añadir supervisión y alertas excedía el alcance disponible. | No seleccionada; demasiadas responsabilidades y riesgos para el MVP planteado. |
+
+## Decisión y límites de la conclusión
+
+Se seleccionó la propuesta de presupuestos y tickets porque el grupo pudo definir un recorrido móvil que cabe en un prototipo: el técnico crea un presupuesto, comparte un enlace temporal de consulta y asocia la fotografía de un ticket al trabajo. El usuario cliente puede consultar el presupuesto sin registrarse.
+
+La hipótesis no se considera validada por el brainstorming. Antes de afirmar que el proyecto responde a una necesidad real, el equipo debe entrevistar a profesionales, comparar el flujo con las alternativas existentes y documentar resultados y casos que contradigan la hipótesis en [01-problema.md](01-problema.md).
