@@ -48,7 +48,7 @@ La consulta pública de solo lectura es parte del comportamiento de RF-04: un en
 - **NF-01 (fotografías):** antes de subir la imagen, la aplicación intentará reducir su tamaño a menos de 500 KB sin perder la legibilidad del texto principal. Se comprobará con la muestra definida en OBJ-04; si no se alcanza el umbral, se informará del resultado real en la evaluación y no se afirmará que se ha cumplido.
 
 ### Recorrido mínimo del usuario:
-- **Acceso:** Abre la aplicación web en el navegador del teléfono móvil e inicia sesión con su cuenta.
+- **Acceso:** Abre la aplicación web en el navegador del teléfono móvil, registra una cuenta si todavía no tiene una e inicia sesión.
 - **Creación:** Tras diagnosticar una avería in situ, crea un nuevo presupuesto introduciendo los datos del cliente y seleccionando líneas de gasto básicas mediante iconos rápidos (material y mano de obra).
 - **Consulta y envío:** Genera un enlace público temporal de solo lectura; el cliente puede abrir y consultar el presupuesto sin registrarse. El técnico abre WhatsApp con el mensaje preparado y confirma personalmente el envío.
 - **Registro de gasto:** Al salir hacia el almacén de suministros, pulsa el botón de captura rápida y fotografía el ticket físico de papel usando la cámara del navegador móvil.
@@ -60,7 +60,7 @@ La consulta pública de solo lectura es parte del comportamiento de RF-04: un en
 La aplicación será una web pensada para el móvil (*mobile-first*), con botones grandes y concebida para teclear lo mínimo. Existirán una vista privada del técnico y una vista pública de solo lectura para el cliente, accesible mediante token temporal. Se utilizará Vite para compilar el proyecto de React, junto con las siguientes herramientas:
 
 - **Navegación (React Router):** Gestión de rutas SPA (`/login`, `/panel`, `/nuevo-presupuesto`) y la ruta pública parametrizada (`/p/:token`), que es la que abre el cliente desde WhatsApp.
-- **Gestión del estado (Zustand):** Se unifica la gestión del estado global en Zustand por su ligereza y simplicidad frente a Redux o Context, manteniendo el usuario con sesión activa y el borrador del presupuesto mientras se navega entre pantallas.
+- **Gestión del estado (Zustand):** Se unifica la gestión del estado global en Zustand por su ligereza y simplicidad frente a Redux o Context, manteniendo el estado de interfaz no sensible y el borrador del presupuesto mientras se navega. El JWT de sesión no se guarda en el cliente; la autenticación efectiva se valida en el servidor con la cookie HttpOnly.
 - **Estilos y componentes de interfaz (CSS nativo + lucide-react):** Se descarta cualquier framework CSS externo (como Tailwind CSS, Bootstrap o MUI) para evitar sobrecarga de dependencias y garantizar un rendimiento óptimo en pantallas táctiles de gama baja. Se utilizará CSS nativo mediante variables CSS (`:root`) para temas/paleta y CSS Modules para encapsular estilos por componente. `lucide-react` aportará los iconos táctiles de los conceptos (material, mano de obra, desplazamiento).
 - **Peticiones al backend (Axios):** Cliente HTTP para comunicar con la API de Express. La sesión del técnico se mantendrá mediante cookie `HttpOnly`, `Secure` y `SameSite=Lax`; el JavaScript del navegador no leerá ni guardará el JWT en `localStorage` o Zustand. Las mutaciones protegidas deberán aplicar controles CSRF apropiados a la estrategia de cookies.
 - **Formularios (React Hook Form):** Control y validación ligera en formularios de login y registro.
@@ -108,7 +108,8 @@ MongoDB encaja como candidato para los documentos de presupuesto porque cada pre
 - Índice por `usuario_id` y `presupuesto_id`.
 
 El importe OCR o manual de un ticket no forma parte del MVP; se necesitará si se implementa RF-11. La API comprobará que el presupuesto asociado pertenece al usuario autenticado.
-![IMAGEN DIAGRAMA2](../img/diagrama2.jpg)
+
+![Esquema preliminar de colecciones MongoDB, referencias e índices](../img/esquema-datos.svg)
 
 ### 3.4 Infraestructura
 - **Frontend (Vercel Hobby):** plan publicado a 0 USD con límites mensuales de uso y condiciones de elegibilidad; validar las condiciones aplicables al uso educativo antes de desplegar.
@@ -119,7 +120,7 @@ El importe OCR o manual de un ticket no forma parte del MVP; se necesitará si s
 
 Los precios y límites cambian. Para que la cookie de sesión no dependa de cookies de terceros, se evaluará exponer la API bajo el mismo origen del frontend mediante un proxy `/api` o, en su defecto, usar dominios propios del mismo sitio y comprobar la política de cookies en Safari y Chrome. Los cambios mutables requerirán protección CSRF. Fuentes oficiales consultadas el 25 de octubre de 2026: [Vercel pricing](https://vercel.com/pricing), [Render Free instances](https://render.com/docs/free), [Atlas Free cluster limitations](https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/) y [Cloudinary pricing](https://cloudinary.com/pricing). Coste inicial de los planes gratuitos descritos: 0 USD, condicionado a elegibilidad, consumo dentro de límites y posibles impuestos o servicios adicionales. Revisar las condiciones vigentes antes de desplegar.
 
-![IMAGEN DIAGRAMA1](../img/diagrama1.jpg)
+![Arquitectura propuesta: React, proxy del mismo origen, API Express, MongoDB Atlas, Cloudinary y enlace de WhatsApp](../img/arquitectura.svg)
 
 ## 4. Evaluación de Capacidades del Equipo
 

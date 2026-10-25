@@ -14,10 +14,10 @@ El equipo está formado por cuatro integrantes con responsabilidades de frontend
 
 | Idea | Problema y usuarios | Decisión |
 |---|---|---|
-| Aprender y recordar técnicas de BJJ | Practicantes que olvidan técnicas al avanzar su entrenamiento. | No seleccionada; el equipo consideró que el público o necesidad eran menos claros para el alcance del módulo. |
-| Gestionar plazos y requisitos de becas y ayudas | Estudiantes y solicitantes que encuentran difícil localizar requisitos y fechas. | No seleccionada; el equipo priorizó otra propuesta. |
-| Presupuestos y gastos para autónomos de oficios | Profesionales que trabajan en movilidad y quieren preparar presupuestos y archivar justificantes desde el teléfono. | Seleccionada; se consideró concreta y abordable con una web MERN. La existencia y relevancia del problema todavía requieren investigación primaria. |
-| Recordatorios de medicación para personas mayores | Personas mayores y familiares que desean recordar y confirmar tomas. | No seleccionada; el equipo observó que ya existen aplicaciones en el área y eligió la propuesta para autónomos. |
+| Aprender y recordar técnicas de BJJ | Practicantes principiantes o con experiencia que necesitan repasar técnicas. | No seleccionada; se consideró que el equipo no había acotado un caso de uso diferenciador ni un público inicial suficientemente concreto. |
+| Gestionar plazos y requisitos de becas y ayudas | Estudiantes y solicitantes que buscan requisitos y fechas. | No seleccionada; mantener información fiable y actualizada exigiría una fuente y un proceso editorial que el equipo no definió para el MVP. |
+| Presupuestos y archivo de tickets para autónomos de oficios | Profesionales en movilidad que preparan presupuestos y registran gastos durante visitas. | Seleccionada para investigar y construir un MVP MERN acotado. La diferenciación y la necesidad siguen pendientes de validación primaria. |
+| Recordatorios de medicación para personas mayores | Personas mayores y familiares o cuidadores que necesitan recordar o confirmar tomas. | No seleccionada; accesibilidad, notificaciones fiables y el contexto sensible de salud ampliarían el alcance y las responsabilidades del MVP. |
 
 ### 1.2 Problema e investigación pendiente
 
@@ -29,29 +29,33 @@ El equipo entrevistará al menos a cinco autónomos de distintos oficios. Se les
 
 Las personas descritas son arquetipos de diseño, no participantes entrevistados ni perfiles cuya representatividad se haya demostrado.
 
-**Paco, 52 años, electricista autónomo**
+**Paco, 52 años, electricista autónomo (arquetipo hipotético)**
 
-- Necesita generar un presupuesto durante o inmediatamente después de una visita y guardar el ticket de un gasto.
-- Se plantea validar si le cuesta usar formularios largos o recordar dónde archivó los justificantes.
-- Casos de uso: iniciar sesión, introducir conceptos e importes, crear un enlace temporal para el cliente, preparar el mensaje de WhatsApp y fotografiar y asociar el ticket al presupuesto.
+- **Contexto:** atiende trabajos en domicilios y se desplaza entre clientes y proveedores; su familiaridad con herramientas de gestión móvil debe validarse.
+- **Necesidades:** preparar un presupuesto claro durante o después de la visita y guardar un justificante asociado al trabajo.
+- **Frustraciones por validar:** volver a introducir datos al final de la jornada, teclear en el móvil durante el trabajo y recordar dónde guardó un ticket.
+- **Objetivos:** compartir la propuesta desde el lugar del trabajo y localizar después el gasto relacionado.
+- **Casos de uso:** iniciar sesión, crear el presupuesto, generar un enlace temporal de consulta, preparar su envío por WhatsApp y asociar una foto de ticket.
 
-**Elena, 41 años, clienta particular**
+**Elena, 41 años, clienta particular (arquetipo hipotético)**
 
-- Necesita consultar desde el móvil un presupuesto desglosado y el importe total.
-- Se plantea validar si prefiere abrir un enlace sin crear una cuenta.
-- Caso de uso MVP: consultar el presupuesto en una página pública de solo lectura. Aprobar o rechazar no forma parte del MVP.
+- **Contexto:** recibe de un profesional una propuesta para un trabajo en su domicilio y la consulta desde su teléfono.
+- **Necesidades:** ver el desglose y el total del presupuesto.
+- **Frustraciones por validar:** buscar la información entre mensajes o tener que instalar una aplicación o crear una cuenta.
+- **Objetivos:** consultar y conservar la información mediante un enlace sencillo.
+- **Caso de uso MVP:** abrir el enlace temporal y consultar el presupuesto sin registrarse. Aceptar o rechazar no está incluido.
 
 ### 1.4 Alternativas y propuesta de valor
 
-| Alternativa | Lo que su proveedor o el equipo documenta | Pregunta de comparación pendiente |
-|---|---|---|
-| Holded | Su página de planes describe una herramienta de gestión para empresas e incluye presupuestos, facturas, contactos y funciones financieras. | ¿Un autónomo necesita esa amplitud o valora un flujo móvil más acotado? |
-| FacturaDirecta | Su página oficial describe facturación, presupuestos y gastos; su plan gratuito publica límites de facturas, clientes y productos. | ¿Cuántos pasos y cuánto tiempo requiere crear y compartir un presupuesto desde un móvil? |
-| FactuPro | Su guía comercial anuncia facturación por WhatsApp y registro de gastos desde fotos de tickets. Es evidencia de oferta comercial, no una validación independiente de uso. | Comparar el producto anunciado con el MVP, que no incluye emisión de facturas fiscales ni OCR. |
-| SinTrámite | Su guía comercial describe captura y organización móvil de tickets, además de estimaciones económicas sin metodología independiente visible en esa página. | Comparar el archivo independiente con la vinculación de tickets a presupuestos; no tomar su estimación monetaria como dato comprobado. |
-| Libreta y WhatsApp | Alternativa manual planteada por el equipo; su uso real y sus ventajas/inconvenientes deben confirmarse en las entrevistas. | ¿Qué información se pierde o se conserva actualmente y qué valor tendría vincular el ticket al trabajo? |
+| Alternativa | Fortalezas documentadas | Limitaciones conocidas / no verificadas | Oportunidad que se investigará |
+|---|---|---|---|
+| Holded | Su página anuncia presupuestos, facturas, contactos y funciones financieras. App Store mostraba 4,5/5 sobre 551 valoraciones el 25/10/2026. | La amplitud no prueba complejidad ni mala adaptación móvil. Algunas reseñas individuales refieren incidencias de documentos y cámara; son autoseleccionadas. | Probar el flujo móvil y preguntar si el público necesita una herramienta más acotada. |
+| FacturaDirecta | Su web anuncia facturación, presupuestos y gastos, con límites publicados para el plan gratuito. | Esos límites no permiten inferir facilidad de uso ni pasos de trabajo; no se ha probado el producto. | Comparar el mismo escenario móvil y registrar pasos, tiempos y bloqueos observados. |
+| FactuPro | Su guía comercial anuncia facturación por WhatsApp y registro de gastos con fotos de tickets. | Sus afirmaciones de rapidez y automatización son del proveedor, no una evaluación independiente. | Comparar el alcance: el MVP no incluye facturas fiscales ni OCR; comprobar si asociar ticket y presupuesto aporta algo distintivo. |
+| SinTrámite | Su guía comercial describe captura y organización móvil de tickets con filtros y exportación. | La fuente no aporta metodología independiente para sus estimaciones económicas. | Validar si asociar el ticket al trabajo es útil frente a un archivo de gastos independiente. |
+| Libreta y WhatsApp | Alternativa manual planteada por el equipo, potencialmente flexible y familiar. | Su uso real y sus problemas no se han confirmado mediante entrevistas. | Preguntar qué usan las personas y cómo recuperan presupuestos y justificantes. |
 
-Las características de Holded y FacturaDirecta se basan en [sus páginas oficiales de planes](https://www.holded.com/es/precios) y [FacturaDirecta](https://www.facturadirecta.com/pequenos-negocios/precios/); las de FactuPro y SinTrámite en [sus propias páginas comerciales](https://factupro.es/blog/facturar-por-whatsapp) y [guía de tickets](https://sintramite.es/organizar-tickets-autonomos), consultadas el 25 de octubre de 2026. La ficha de [Holded en App Store](https://apps.apple.com/es/app/holded-facturaci%C3%B3n-y-mucho-m%C3%A1s/id1369704574?see-all=reviews) mostraba 4,5/5 sobre 551 valoraciones y algunas reseñas individuales mencionaban problemas de visualización de documentos o de acceso a la cámara; son comentarios autoseleccionados, no evidencia representativa. No se afirma que estas interfaces sean difíciles ni que sus usuarios estén generalmente insatisfechos.
+Las características de Holded y FacturaDirecta se basan en [sus páginas de planes](https://www.holded.com/es/precios) y [FacturaDirecta](https://www.facturadirecta.com/pequenos-negocios/precios/); las de FactuPro y SinTrámite en [sus guías comerciales](https://factupro.es/blog/facturar-por-whatsapp) y [de organización de tickets](https://sintramite.es/organizar-tickets-autonomos). La ficha de [Holded en App Store](https://apps.apple.com/es/app/holded-facturaci%C3%B3n-y-mucho-m%C3%A1s/id1369704574?see-all=reviews) mostraba la valoración y las reseñas descritas arriba. Consultas realizadas el 25 de octubre de 2026. La tabla distingue material comercial y reseñas de evidencia primaria; el protocolo de entrevistas y las instrucciones para una prueba comparativa están en [01-problema.md](propuesta/01-problema.md).
 
 **Propuesta de valor hipotética:** «Para profesionales de oficios que preparan presupuestos y guardan gastos durante su jornada, Presupuestando ofrece un recorrido web móvil para consultar un presupuesto mediante un enlace temporal de solo lectura y asociar la fotografía de un ticket al trabajo, sin que el cliente necesite una cuenta». No se afirma que sea la única solución que usa WhatsApp o captura tickets; la diferenciación propuesta debe compararse y validarse con usuarios.
 
@@ -87,7 +91,7 @@ Las características de Holded y FacturaDirecta se basan en [sus páginas oficia
 
 ### 2.2 MVP y recorrido mínimo
 
-El cliente consulta el presupuesto como parte del requisito RF-04: generar un enlace que no permita ver el presupuesto no satisface el MVP. El enlace solo muestra el contenido y caduca; no permite cambiar su estado. El recorrido mínimo es: el técnico crea una cuenta e inicia sesión, introduce conceptos e importes, guarda el presupuesto, obtiene un enlace temporal, lo comparte mediante WhatsApp, y registra una fotografía de un ticket asociada al trabajo.
+El cliente consulta el presupuesto como parte del requisito RF-04: generar un enlace que no permita ver el presupuesto no satisface el MVP. El enlace solo muestra el contenido y caduca; no permite cambiar su estado. El recorrido mínimo es: el técnico registra una cuenta si todavía no tiene una, inicia sesión, introduce conceptos e importes, guarda el presupuesto, obtiene un enlace temporal, lo comparte mediante WhatsApp y registra una fotografía de un ticket asociada al trabajo.
 
 ### 2.3 Stack, arquitectura y datos
 
@@ -106,7 +110,15 @@ MongoDB es una opción a validar: los conceptos pueden almacenarse embebidos por
 
 Se crearán índices únicos para el correo y el hash del token, y consultas indexadas por propietario, presupuesto y fecha. Los importes se almacenarán como enteros en céntimos. El token del enlace será aleatorio y de alta entropía; se guardará su hash y fecha de caducidad. Los presupuestos no se eliminarán automáticamente al caducar el enlace.
 
-### 2.4 Seguridad, privacidad y restricciones de servicios
+![Esquema de datos propuesto: colecciones, campos principales e índices](img/esquema-datos.svg)
+
+### 2.4 Arquitectura propuesta
+
+La SPA se sirve desde Vercel y usará una ruta proxy `/api` del mismo origen hacia Express en Render para reducir la dependencia de cookies entre sitios. La sesión del técnico viajará en una cookie `HttpOnly`, `Secure` y `SameSite=Lax`; las mutaciones protegidas tendrán defensa CSRF. El cliente consulta un presupuesto mediante un enlace aleatorio temporal: el servidor compara el hash del token, comprueba su caducidad y devuelve solo lectura. El técnico debe confirmar el mensaje de WhatsApp. Express valida cargas antes de enviarlas a Cloudinary y comprueba la propiedad del presupuesto antes de registrar el ticket.
+
+![Arquitectura propuesta: cliente móvil, proxy, API, base de datos y almacenamiento de imágenes](img/arquitectura.svg)
+
+### 2.5 Seguridad, privacidad y restricciones de servicios
 
 - El servidor validará la sesión y comprobará que el técnico solo accede a sus propios presupuestos y tickets. Las contraseñas nunca se guardarán en texto claro.
 - El JWT no se almacenará en `localStorage` ni en Zustand. La solución prevista usa una cookie `HttpOnly`, `Secure` y `SameSite=Lax`, controles CSRF para las mutaciones y restricciones CORS. Se evaluará exponer la API con un proxy `/api` bajo el mismo origen del frontend o usar dominios propios del mismo sitio; la configuración deberá probarse en Safari y Chrome.
@@ -115,7 +127,7 @@ Se crearán índices únicos para el correo y el hash del token, y consultas ind
 - Los límites y precios de los planes cambian. A fecha de consulta, Atlas Free publica 512 MB y limitaciones de regiones/configuración; Cloudinary Free publica 25 créditos mensuales cuyo consumo depende de los recursos usados; Render Free proporciona 750 horas por *workspace*, suspende servicios sin tráfico durante 15 minutos y advierte que sus instancias gratuitas no son para producción. Vercel Hobby tiene límites de uso y condiciones de elegibilidad que deben comprobarse para el uso previsto.
 - Fuentes oficiales consultadas el 25 de octubre de 2026: [Atlas Free](https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/), [Cloudinary](https://cloudinary.com/pricing), [Render](https://render.com/docs/free) y [Vercel](https://vercel.com/pricing). Estimación del prototipo: 0 USD en esos planes gratuitos, solo si el uso permanece dentro de sus límites y sus condiciones; revisar antes de desplegar.
 
-### 2.5 Capacidades, lagunas y riesgos
+### 2.6 Capacidades, lagunas y riesgos
 
 El inventario inicial de habilidades y las lagunas identificadas se recogen en [02-viabilidad-tecnica.md](propuesta/02-viabilidad-tecnica.md). Es una autoevaluación; se revisará durante las pruebas de concepto. El alcance de siete requisitos Must parece abordable, pero la duración exacta debe contrastarse con las semanas disponibles y con las pruebas de autenticación, enlace temporal, carga de imagen y despliegue.
 
@@ -137,9 +149,9 @@ Facilitar que profesionales autónomos de oficios creen y consulten presupuestos
 
 | ID | Indicador de éxito | Comprobación antes de la defensa final |
 |---|---|---|
-| OBJ-01: crear presupuesto y preparar enlace móvil | Al menos 4 de 5 intentos en menos de 3 minutos. | Cronometrar cinco tareas con al menos tres autónomos de distintos oficios; anotar errores y abandonos. |
-| OBJ-02: fotografiar y asociar un ticket | Al menos 4 de 5 intentos en menos de 30 segundos con 4G o equivalente. | Cronometrar cinco tareas y separar captura, carga y asociación. |
-| OBJ-03: consultar el presupuesto sin registro | Al menos 4 de 5 participantes encuentran conceptos y total en menos de 1 minuto. | Prueba con al menos cinco personas que representen clientes, en sus teléfonos. No incluye aprobación. |
+| OBJ-01: reducir el esfuerzo de preparar y compartir un presupuesto desde el lugar de trabajo | Al menos 4 de 5 participantes completan la tarea en menos de 3 minutos. | Cronometrar una tarea con cada uno de cinco autónomos de distintos oficios; anotar errores y abandonos. |
+| OBJ-02: facilitar el archivo inmediato de un ticket de gasto asociado al trabajo | Al menos 4 de 5 participantes completan la tarea en menos de 30 segundos con 4G o equivalente. | Cronometrar una tarea con cada uno de los mismos cinco autónomos y separar captura, carga y asociación. |
+| OBJ-03: facilitar al cliente la consulta del presupuesto recibido sin crear una cuenta | Al menos 4 de 5 participantes encuentran conceptos y total en menos de 1 minuto. | Prueba con al menos cinco personas que representen clientes, en sus teléfonos. No incluye aprobación. |
 | OBJ-04: reducir el peso de fotografías sin perder legibilidad | Al menos 9 de 10 imágenes inferiores a 500 KB y con texto principal legible. | Medir peso y revisar legibilidad en diez fotos tomadas con al menos tres móviles distintos. |
 
 La muestra es pequeña y exploratoria; los resultados no se generalizarán estadísticamente. El protocolo y las limitaciones se documentarán junto a los resultados.

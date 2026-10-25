@@ -31,15 +31,17 @@ Las siguientes personas son **arquetipos hipotéticos**, elaborados para orienta
 
 ### Persona 1: Paco, 52 años, electricista autónomo (hipótesis)
 
+- **Contexto:** atiende trabajos en domicilios y se desplaza entre clientes y proveedores; su familiaridad con herramientas de gestión móvil aún debe comprobarse.
 - **Necesidades:** preparar un presupuesto claro durante o inmediatamente después de una visita; guardar el justificante de un gasto asociado al trabajo.
-- **Frustraciones por validar:** volver a introducir datos al final de la jornada, teclear con el móvil y tener que recordar dónde guardó un ticket.
-- **Objetivos:** compartir una propuesta comprensible desde el lugar de trabajo y encontrar después el gasto asociado.
+- **Frustraciones por validar:** volver a introducir datos al final de la jornada, teclear con el móvil en un entorno de trabajo y tener que recordar dónde guardó un ticket.
+- **Objetivos:** compartir una propuesta comprensible desde el lugar de trabajo y encontrar después el gasto asociado al mismo trabajo.
 - **Casos de uso:** acceder a su cuenta, crear un presupuesto con conceptos e importes, generar un enlace temporal para consultarlo y compartirlo por WhatsApp; fotografiar un ticket y asociarlo al presupuesto.
 
 ### Persona 2: Elena, 41 años, clienta particular (hipótesis)
 
+- **Contexto:** recibe una propuesta de un profesional para un trabajo en su domicilio y la consulta desde su teléfono.
 - **Necesidades:** consultar desde el móvil el desglose y el importe de un presupuesto recibido.
-- **Frustraciones por validar:** tener que instalar una aplicación o crear una cuenta para consultar una propuesta.
+- **Frustraciones por validar:** buscar la información entre mensajes o tener que instalar una aplicación o crear una cuenta para consultar una propuesta.
 - **Objetivos:** acceder a la información acordada mediante un enlace y poder conservarla.
 - **Caso de uso incluido en el MVP:** abrir el enlace temporal y consultar el presupuesto sin registrarse. Aceptar o rechazar queda fuera del MVP y se considera una ampliación.
 
@@ -47,17 +49,50 @@ Las siguientes personas son **arquetipos hipotéticos**, elaborados para orienta
 
 La comparación separa características que los proveedores anuncian de observaciones de reseñas. Las páginas comerciales describen sus propios productos; no demuestran demanda ni facilidad de uso. Las reseñas son experiencias individuales, no una muestra representativa.
 
-| Alternativa | Características documentadas | Oportunidad que se investigará |
+| Alternativa | Fortalezas documentadas | Limitaciones conocidas / no verificadas | Oportunidad que se investigará |
 |---|---|---|
-| **Holded** | Su página de precios presenta una suite de gestión para pequeñas empresas y enumera, entre otras funciones, presupuestos, facturas, contactos y herramientas financieras. La oferta depende del plan. | Comprobar con autónomos si necesitan una herramienta más acotada para generar y compartir un presupuesto desde el móvil, o si la solución actual ya les resulta suficiente. |
-| **FacturaDirecta** | La página oficial presenta facturación, presupuestos y gastos; el plan gratuito publicado incluye límites de facturas, clientes y productos. Los límites y precios pueden cambiar. | Comparar el número de pasos necesarios para crear y compartir un presupuesto en un teléfono, sin asumir que la aplicación actual sea inadecuada. |
-| **FactuPro** | En su propia guía comercial anuncia un servicio de facturación por WhatsApp que también registra gastos a partir de fotos de tickets. Es una señal de que la combinación WhatsApp + gastos ya tiene oferta comercial, no una prueba independiente de su adopción o eficacia. | Comparar alcance y recorrido: FactuPro anuncia generación de facturas y automatización; el MVP de Presupuestando se limita a presupuestos de solo lectura y asociación de fotos, sin facturación fiscal ni OCR. Verificar en una prueba de producto antes de atribuir ventajas. |
-| **SinTrámite** | Su guía comercial describe captura y organización móvil de facturas/tickets y presenta estimaciones sobre el impacto de extraviarlos. No publica allí una metodología independiente que permita tratar esas cifras como medición representativa. | Comparar si un archivo vinculado a un presupuesto resuelve una necesidad distinta de guardar el gasto en el propio teléfono; validar con usuarios. |
-| **Libreta y WhatsApp** | Alternativa manual: notas en papel y comunicación directa por mensajería. El equipo aún debe verificar su uso, ventajas e inconvenientes mediante entrevistas. | Evaluar si un enlace consultable y un archivo de tickets asociado a cada trabajo aportan suficiente valor frente a una alternativa flexible y familiar. |
+| **Holded** | Su página de precios anuncia presupuestos, facturas, contactos y funciones financieras en una suite para empresas. La App Store mostraba 4,5/5 sobre 551 valoraciones en la consulta del 25 de octubre de 2026. | La amplitud de funciones y planes puede ser más de lo requerido por el MVP, pero no demuestra complejidad ni mala adaptación móvil. Algunas reseñas individuales mencionan incidencias de visualización de documentos y cámara; son autoseleccionadas y no representativas. | Probar en móvil el tiempo y los pasos para crear y compartir un presupuesto; preguntar a autónomos si necesitan una herramienta más acotada o prefieren la amplitud existente. |
+| **FacturaDirecta** | Su web anuncia facturación, presupuestos y gastos, además de un plan gratuito con límites publicados de facturas, clientes y productos. | Los límites del plan no permiten concluir nada sobre facilidad de uso, requisitos de ficha de cliente o calidad de la experiencia móvil; no se ha realizado una prueba del producto. | Comparar el mismo escenario de creación y consulta desde móvil, registrando tareas y pasos sin presuponer el resultado. |
+| **FactuPro** | Su guía comercial anuncia creación y envío de facturas por WhatsApp y registro de gastos con fotos de tickets. Esto confirma que existe oferta comercial que combina mensajería y gastos. | Es contenido del proveedor; sus afirmaciones sobre rapidez, automatización y público objetivo no son una evaluación independiente. El producto anuncia facturas y automatización que no forman parte del MVP de Presupuestando. | Comparar el alcance y probar si la asociación explícita ticket-presupuesto aporta valor frente al flujo anunciado por el proveedor. |
+| **SinTrámite** | Su guía comercial describe captura móvil y organización de tickets en el teléfono, con filtros y exportación. | La guía publica estimaciones económicas, pero no muestra una metodología independiente ni una muestra que permita tratarlas como datos representativos. La solución se describe como local al teléfono, distinta de un archivo compartido con presupuestos. | Validar si guardar el ticket junto al presupuesto resuelve una necesidad que un archivo de gastos independiente no cubre. |
+| **Libreta y WhatsApp** | Alternativa manual hipotética: flexible y no exige adoptar una nueva herramienta; estas ventajas deben confirmarse con participantes. | Puede dejar información repartida entre papel y conversaciones, pero el equipo todavía no ha observado ni medido ese comportamiento con usuarios. | Preguntar qué herramientas usan realmente y cómo recuperan presupuestos y justificantes, antes de atribuir fallos a esta alternativa. |
 
-Como evidencia cualitativa exploratoria, la ficha de Holded en la App Store mostraba, al consultarla el 25 de octubre de 2026, una valoración global de 4,5/5 sobre 551 valoraciones y algunas reseñas individuales que mencionan problemas de visualización de documentos o de acceso a la cámara. Son comentarios autoseleccionados sobre incidencias concretas; no demuestran que la aplicación sea generalmente difícil ni que los usuarios objetivo compartan esa experiencia. La página de FactuPro sirve como evidencia de oferta comercial existente en este ámbito, no como investigación de usuarios.
+Como evidencia cualitativa exploratoria, la ficha de Holded en la App Store mostraba, al consultarla el 25 de octubre de 2026, una valoración global de 4,5/5 sobre 551 valoraciones y algunas reseñas individuales que mencionan problemas de visualización de documentos o de acceso a la cámara. Son comentarios autoseleccionados sobre incidencias concretas; no demuestran que la aplicación sea generalmente difícil ni que los usuarios objetivo compartan esa experiencia. Las páginas de FactuPro y SinTrámite sirven para documentar oferta comercial, no como investigación independiente de usuarios.
 
 **Propuesta de valor, pendiente de validación:** «Para profesionales de oficios que preparan presupuestos y guardan gastos durante su jornada, Presupuestando ofrece un recorrido web móvil para consultar un presupuesto mediante un enlace temporal de solo lectura y asociar la fotografía de un ticket al trabajo, sin que el cliente necesite una cuenta». No se afirma que sea la única solución que usa WhatsApp o captura tickets; su diferenciación propuesta es el alcance acotado a presupuestos y la asociación del gasto al trabajo, aspectos que deben compararse y validarse.
+
+### Protocolo de entrevistas y registro de resultados
+
+**Muestra prevista:** al menos cinco profesionales autónomos de oficios distintos que hayan preparado un presupuesto en el último mes. Para comprobar el caso del cliente, realizar además pruebas de consulta con al menos cinco personas que hayan recibido o solicitado presupuestos de servicios domésticos. Las muestras son exploratorias, no representativas.
+
+**Guion neutral para profesionales:**
+
+1. Cuéntame la última vez que preparaste un presupuesto después de visitar a un cliente. ¿Qué ocurrió, paso a paso?
+2. ¿Qué herramientas utilizaste y en qué dispositivo?
+3. ¿Cuánto tiempo transcurrió entre la visita y el envío? ¿Qué hizo que tardara ese tiempo?
+4. ¿Qué información necesitaste y qué parte te resultó más laboriosa?
+5. ¿Qué hiciste la última vez que compraste material para un trabajo? ¿Cómo guardaste el justificante?
+6. En los últimos tres meses, ¿recuerdas algún presupuesto que no pudieras enviar cuando querías o algún justificante que no pudieras localizar? Si no, anotar «no recuerda».
+7. ¿Qué consecuencias tuvo ese caso, si las hubo?
+8. ¿Qué solución utilizas hoy y qué te funciona bien de ella?
+9. ¿Qué cambiarías primero de tu proceso actual?
+10. ¿Hay algo de tu proceso que haga que una herramienta móvil o un enlace compartible no te sirva?
+
+No mostrar la idea del equipo hasta terminar las preguntas sobre el proceso actual. Registrar también respuestas que contradigan la hipótesis. Con autorización, se puede cronometrar un escenario de uso del prototipo después de la entrevista; separar siempre el relato retrospectivo de la observación directa.
+
+**Plantilla anonimizada para completar tras las entrevistas** —no rellenar con estimaciones ni respuestas inventadas:
+
+| Código | Perfil general (sin nombre/empresa) | Fecha | Proceso/herramientas descritos | Tiempo declarado (si lo recuerda) | Problema o evidencia concreta | Contraejemplo / qué funciona hoy |
+|---|---|---|---|---|---|---|
+| P-01 | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente |
+| P-02 | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente |
+| P-03 | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente |
+| P-04 | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente |
+| P-05 | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente | Pendiente |
+
+Antes de publicar el resumen, quitar nombres, teléfonos, ubicaciones precisas, datos de clientes y cualquier dato fiscal. Indicar el número real de entrevistas, fechas, método de selección, patrones y desacuerdos; no extrapolar porcentajes de una muestra pequeña.
+
+**Prueba de competencia pendiente:** usar el mismo escenario en cada producto al que el equipo tenga acceso legítimo: crear un presupuesto de ejemplo, compartirlo/consultarlo desde un móvil y localizar el gasto o ticket. Registrar producto, plan, fecha, dispositivo, resultado de cada paso y aquello que no se pudo probar. No intentar evadir planes de pago ni atribuir como limitación algo que no se haya comprobado.
 
 ### Fuentes consultadas
 
