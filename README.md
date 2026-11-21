@@ -11,7 +11,6 @@ El equipo quiere comprobar si los profesionales de oficios necesitan una forma m
 | Persona | GitHub | Rol técnico |
 |---|---|---|
 | Dylan Bauti Huelva | [@dbauhue1708](https://github.com/dbauhue1708) | Frontend Lead & UX |
-| Rocío Luque Montes | [@lmrocio](https://github.com/lmrocio) | Frontend Developer & Usabilidad |
 | Manuel Amado Rodríguez | [@mamarod428](https://github.com/mamarod428) | Backend Lead & Auth |
 | José Luis Yuani Barea | [@jyuanib](https://github.com/jyuanib) | Database Manager & QA/DevOps |
 
