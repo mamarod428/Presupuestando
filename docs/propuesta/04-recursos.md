@@ -9,10 +9,17 @@ La Fase 4 detalla la organización humana, tecnológica y metodológica del equi
 
 | Persona | Rol | De qué responde |
 | :--- | :--- | :--- |
-| Dylan Bauti Huelva (@dbauhue1708) | Frontend Lead & UX | Revisa PR de `client/` en rotación; responde de React, navegación, estado y accesibilidad móvil. |
-| Rocío Luque Montes (@lmrocio) | Frontend Developer & Usabilidad | Implementa las vistas de técnico y cliente, formularios y flujo de cámara; participa en pruebas con usuarios. |
+| Dylan Bauti Huelva (@dbauhue1708) | Frontend Lead & UX | Revisa PR de `client/` en rotación; responde de React, vistas de técnico y cliente, formularios, flujo de cámara, navegación, estado y accesibilidad móvil. |
 | Manuel Amado Rodríguez (@mamarod428) | Backend Lead & Auth | Revisa PR de `server/` en rotación; responde de la API, autenticación y carga de ficheros. |
-| José Luis Yuani Barea (@jyuanib) | Database Manager & QA/DevOps | Responde del diseño de MongoDB, integración de almacenamiento, pruebas y despliegues. |
+| José Luis Yuani Barea (@jyuanib) | Database Manager & QA/DevOps | Responde del diseño de MongoDB, integración de almacenamiento, pruebas con usuarios/QA y despliegues. |
+
+### Responsables por módulo
+
+| Módulo | Requisitos (RF del MVP) | Responsable | Apoyo |
+| :--- | :--- | :--- | :--- |
+| Autenticación y Usuarios | RF-01, RF-02 | Manuel | Dylan |
+| Gestión de Presupuestos y enlace público | RF-03, RF-04, RF-05 | Dylan | José Luis |
+| Captura y asociación de tickets | RF-06, RF-07 | José Luis | Manuel |
 
 ### Responsables por módulo
 
