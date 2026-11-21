@@ -129,7 +129,6 @@ Los precios y límites cambian. Para que la cookie de sesión no dependa de cook
 | Persona | HTML/CSS | JavaScript/React | Node.js/Express | MongoDB | Git/DevOps | Diseño UX |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Dylan Bauti Huelva** | Avanzado | Intermedio | Básico | Intermedio | Intermedio | Básico |
-| **Rocío Luque Montes** | Avanzado | Avanzado | Intermedio | Intermedio | Intermedio | Avanzado |
 | **Manuel Amado Rodríguez** | Intermedio | Intermedio | Intermedio | Intermedio | Intermedio | Básico |
 | **José Luis Yuani Barea** | Intermedio | Básico | Básico | Básico | Básico | Intermedio |
 
@@ -140,7 +139,7 @@ Los precios y límites cambian. Para que la cookie de sesión no dependa de cook
 - **Despliegues en Render y Vercel:** Configuración de variables de entorno seguras, políticas de CORS y conexión con MongoDB Atlas en producción.
 
 ### 4.3 Viabilidad temporal
-El alcance de siete Must parece abordable para cuatro integrantes, pero la viabilidad temporal no está demostrada todavía. Antes de comprometer fechas, el equipo debe realizar una prueba de concepto de autenticación, enlace temporal, carga móvil de imagen y despliegue, y actualizar la estimación con el tiempo disponible en el calendario del módulo.
+El alcance de siete Must parece abordable para tres integrantes, pero la viabilidad temporal no está demostrada todavía. Antes de comprometer fechas, el equipo debe realizar una prueba de concepto de autenticación, enlace temporal, carga móvil de imagen y despliegue, y actualizar la estimación con el tiempo disponible en el calendario del módulo.
 
 ## 5. Identificación de Riesgos Técnicos
 

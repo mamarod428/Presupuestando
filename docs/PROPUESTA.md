@@ -6,7 +6,7 @@
 
 El MVP permite que un técnico se registre e inicie sesión, cree un presupuesto, genere un enlace temporal de solo lectura y prepare el mensaje para compartirlo por WhatsApp. También permite fotografiar un ticket y asociarlo al presupuesto propio. El cliente puede consultar el presupuesto sin registrarse, pero no aceptarlo ni rechazarlo en esta primera versión. La solución propuesta emplea MongoDB, Express, React y Node.js, con Vercel y Render para el despliegue educativo y Cloudinary para almacenar imágenes, siempre dentro de los límites y condiciones de los planes vigentes.
 
-El equipo está formado por cuatro integrantes con responsabilidades de frontend, backend, datos y pruebas/despliegue. Antes de afirmar que el producto resuelve una necesidad real, el equipo realizará entrevistas y pruebas de usabilidad, y documentará el método, los resultados anonimizados y las limitaciones de la muestra.
+El equipo está formado por tres integrantes con responsabilidades de frontend, backend, datos y pruebas/despliegue. Antes de afirmar que el producto resuelve una necesidad real, el equipo realizará entrevistas y pruebas de usabilidad, y documentará el método, los resultados anonimizados y las limitaciones de la muestra.
 
 ## 1. Detección del problema
 
@@ -168,12 +168,11 @@ Ampliaciones priorizadas: aceptación/rechazo; historial y gastos mensuales; cá
 
 | Persona | Usuario GitHub | Rol |
 |---|---|---|
-| Dylan Bauti Huelva | [@dbauhue1708](https://github.com/dbauhue1708) | Frontend Lead & UX; React, navegación y accesibilidad móvil. |
-| Rocío Luque Montes | [@lmrocio](https://github.com/lmrocio) | Frontend y usabilidad; vistas, formularios, cámara y pruebas con usuarios. |
+| Dylan Bauti Huelva | [@dbauhue1708](https://github.com/dbauhue1708) | Frontend Lead & UX; React, vistas, formularios, cámara, navegación y accesibilidad móvil. |
 | Manuel Amado Rodríguez | [@mamarod428](https://github.com/mamarod428) | Backend Lead & Auth; API, autenticación y carga de archivos. |
-| José Luis Yuani Barea | [@jyuanib](https://github.com/jyuanib) | Database Manager & QA/DevOps; MongoDB, almacenamiento, pruebas y despliegue. |
+| José Luis Yuani Barea | [@jyuanib](https://github.com/jyuanib) | Database Manager & QA/DevOps; MongoDB, almacenamiento, pruebas con usuarios y despliegue. |
 
-Los módulos asignan dueño y apoyo: autenticación (Manuel/Dylan), presupuestos y enlace (Dylan/Rocío), tickets (José Luis/Manuel). Los leads revisan cambios de su capa, pero ninguna persona aprueba su propio PR.
+Los módulos asignan dueño y apoyo: autenticación (Manuel/Dylan), presupuestos y enlace (Dylan/José Luis), tickets (José Luis/Manuel). Los leads revisan cambios de su capa, pero ninguna persona aprueba su propio PR.
 
 ### 4.2 Versiones y herramientas
 
